@@ -8,5 +8,8 @@ function helloWorld() {
 // }
 
 function sayHello(input) {
+    if (input === undefined || input === true) {
+        return "Hello, World!";
+    }
     return "Hello, " + input + "!";
 }
