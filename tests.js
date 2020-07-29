@@ -30,10 +30,19 @@ describe("sayHello", function() {
     it('should return the string "Hello, Pat! when executed', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it('should return the string "Hello, World!" if undefined, true, or false.', function () {
+    it('should return the string "Hello, World!" if undefined, true, false, or a number.', function () {
         expect(sayHello()).toBe("Hello, World!");
         expect(sayHello(true)).toBe("Hello, World!");
         expect(sayHello(false)).toBe("Hello, World!");
+        expect(sayHello(null)).toBe("Hello, World!");
+        expect(sayHello(3.4)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World" if the string is empty', function () {
+        expect(sayHello("")).toBe("Hello, World!");
+
+    });
+    it('should return the string "Hello, World!" if the string contains a number', function () {
+        expect(sayHello("5")).toBe("Hello, World!");
     });
 
 });

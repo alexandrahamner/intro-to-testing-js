@@ -8,8 +8,11 @@ function helloWorld() {
 // }
 
 function sayHello(input) {
-    if (input === undefined || input === true || input === false) {
+    if (typeof input !== "string" || input === "") {
         return "Hello, World!";
+    } else if (!isNaN(input) && typeof input === "string") {
+        return "Hello, World!"
+    } else {
+        return "Hello, " + input + "!";
     }
-    return "Hello, " + input + "!";
 }
