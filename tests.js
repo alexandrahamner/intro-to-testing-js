@@ -51,3 +51,19 @@ describe("sayHello", function() {
     })
 
 });
+
+describe("isFive", function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should be a boolean', function() {
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('should be the number 5', function () {
+        expect(isFive(5)).toBe(true);
+        expect(isFive(4)).toBe(false);
+    });
+    it('should convert "5" to a number', function () {
+       expect(isFive("5")).toBe(true);
+    });
+});
