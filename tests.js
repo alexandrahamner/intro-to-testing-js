@@ -67,3 +67,24 @@ describe("isFive", function() {
        expect(isFive("5")).toBe(true);
     });
 });
+
+describe("isEven", function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should be a boolean', function () {
+        expect(typeof isEven()).toBe("boolean")
+    });
+    it('should be an even number', function () {
+        expect(isEven(-4)).toBe(true);
+        expect(isEven(3)).toBe(false);
+    });
+    it('should be a number', function () {
+        expect(isEven("8")).toBe(true);
+        expect(isEven("banana")).toBe(false);
+        expect(isEven(Infinity)).toBe(false);
+        expect(isEven(true)).toBe(false);
+        expect(isEven(false)).toBe(false);
+        expect(isEven()).toBe(false);
+    });
+});

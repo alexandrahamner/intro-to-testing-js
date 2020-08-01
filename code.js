@@ -14,7 +14,12 @@ function sayHello(input) {
     return "Hello, World!";
 }
 
-function isFive(input) {
 
+function isFive(input) {
     return parseFloat(input) === 5;
+}
+
+
+function isEven(x) {
+    return (parseFloat(x) % 2) === 0;
 }
