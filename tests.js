@@ -56,7 +56,7 @@ describe("isFive", function() {
     it('should be a defined function', function() {
         expect(typeof isFive).toBe('function');
     });
-    it('should be a boolean', function() {
+    it('should return a boolean when called', function() {
         expect(typeof isFive()).toBe('boolean');
     });
     it('should be the number 5', function () {
@@ -72,7 +72,7 @@ describe("isEven", function () {
     it('should be a defined function', function () {
         expect(typeof isEven).toBe('function');
     });
-    it('should be a boolean', function () {
+    it('should return a boolean', function () {
         expect(typeof isEven()).toBe("boolean")
     });
     it('should be an even number', function () {
@@ -86,5 +86,31 @@ describe("isEven", function () {
         expect(isEven(true)).toBe(false);
         expect(isEven(false)).toBe(false);
         expect(isEven()).toBe(false);
+    });
+});
+
+describe("isVowel", function() {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean when executed', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should take a letter as an argument', function () {
+        expect(isVowel("a")).toBe(true);
+        expect(isVowel("A")).toBe(true);
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+        expect(isVowel(6)).toBe(false);
+        expect(isVowel()).toBe(false);
+    });
+    it('should be one character long', function () {
+        expect(isVowel("e")).toBe(true);
+        expect(isVowel("banana")).toBe(false);
+
+    });
+    it('should take in a vowel as an argument', function () {
+        expect(isVowel("i")).toBe(true);
+        expect(isVowel("b")).toBe(false);
     });
 });

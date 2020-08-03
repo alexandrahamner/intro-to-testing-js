@@ -23,3 +23,7 @@ function isFive(input) {
 function isEven(x) {
     return (parseFloat(x) % 2) === 0;
 }
+
+function isVowel(x) {
+    return (x === "a" || x === "e" || x === "i" || x === "o" || x === "u" || x === "A" || x === "E" || x === "I" || x === "O" || x === "U");
+}
